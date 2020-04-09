@@ -1,0 +1,3 @@
+[submodule "deRigorich"]
+	path = deRigorich
+	url = https://github.com/Rigorich/deRigorich

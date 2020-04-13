@@ -3,11 +3,11 @@ NAME_PART = Solve
 PATH_LIB = Rigorich/C89Labs
 
 build:
-    cd $(CURDIR)
-    gcc -std=c89 -c $(PATH_LIB)/deRigorich/deRigorich.c -o deRigorich.o
-    ar rcs libdeRigorich.a deRigorich.o
-    gcc -std=c89 -I $(PATH_LIB)/deRigorich -c "$(NAME_PART).c" -o "$(NAME_PART).o"
-    gcc -std=c89 "$(NAME_PART).o" -L . -l deRigorich -o "$(NAME_PART).exe"
+	cd $(CURDIR)
+	gcc -std=c89 -c $(PATH_LIB)/deRigorich/deRigorich.c -o deRigorich.o
+	ar rcs libdeRigorich.a deRigorich.o
+	gcc -std=c89 -I $(PATH_LIB)/deRigorich -c "$(NAME_PART).c" -o "$(NAME_PART).o"
+	gcc -std=c89 "$(NAME_PART).o" -L . -l deRigorich -o "$(NAME_PART).exe"
 
 run:
-    ./$(NAME_PART)
+	./$(NAME_PART)

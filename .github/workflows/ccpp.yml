@@ -12,8 +12,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: L1
-      run: cd Lab1
-    - name: test
-      run: make
+      - uses: actions/checkout@v2
+      - name: Display the path
+        run: echo %PATH%
+        shell: cmd
+      - name: test
+        run: make
+        working-directory: ./Lab1

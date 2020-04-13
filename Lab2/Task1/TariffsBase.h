@@ -1,7 +1,7 @@
 #ifndef TARIFFSBASE_H
 #define TARIFFSBASE_H
 
-#include "C:\BSUIR\C\deRigorich\deRigorich.h"
+#include "deRigorich.h"
 
 /* Статистика пользователя */
 typedef struct {

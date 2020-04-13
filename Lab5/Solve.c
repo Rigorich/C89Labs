@@ -94,6 +94,7 @@ void ListReverse(List* this){
 
 int main(void) {
     List* a = ListNew(sizeof(int));
+    printf("Enter array size (0..42): ");
     int N = StringReadInt(stdin, 0, 42);
     int i;
     

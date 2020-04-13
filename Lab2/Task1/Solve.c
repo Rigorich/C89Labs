@@ -1,10 +1,10 @@
 
-#include "C:\BSUIR\C\deRigorich\deRigorich.h"
+#include "deRigorich.h"
 
 #include <stdlib.h>
 #include <locale.h>
 
-#include "C:\BSUIR\C\Lab2\Task1\TariffsBase.h"
+#include "TariffsBase.h"
 
 void WriteTariffs(void) {
     system("cls");

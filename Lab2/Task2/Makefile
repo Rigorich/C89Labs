@@ -1,5 +1,5 @@
 all: build run
-NAME_PART = Solve
+NAME_PART = Add
 PATH_LIB = Rigorich/C89Labs
 
 build:

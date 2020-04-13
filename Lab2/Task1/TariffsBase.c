@@ -1,4 +1,4 @@
-#include "C:\BSUIR\C\Lab2\Task1\TariffsBase.h"
+#include "TariffsBase.h"
 
 /* 
     Для добавления тарифа в базу данных создайте фрагмент кода
@@ -32,8 +32,7 @@
         
         return sum;
     }
-
-    
+ 
 */
 
 /* Добавление одного тарифв в массив */

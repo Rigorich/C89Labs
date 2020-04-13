@@ -1,9 +1,0 @@
-NPP_SAVE // save current file
-cd $(CURRENT_DIRECTORY) // go to directory of the current file
-gcc -std=c89 -c "$(FILE_NAME)" -o "$(NAME_PART).o"
-if $(EXITCODE) != 0 goto Done
-gcc -std=c89 "$(NAME_PART).o" -L C:\BSUIR\C\deRigorich -l deRigorich -L C:\BSUIR\C\Lab2\Task1 -l TariffsBase -o "$(NAME_PART).exe"
-if $(EXITCODE) != 0 goto Done
-NPP_CONSOLE 0
-NPP_RUN cmd /C "$(NAME_PART)" && pause
-:Done

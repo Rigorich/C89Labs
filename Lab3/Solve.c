@@ -1,7 +1,5 @@
 
-#include "C:\BSUIR\C\deRigorich\deRigorich.h"
-
-#include <windows.h>
+#include "deRigorich.h"
 
 const int FieldSize = 8;
 
@@ -32,11 +30,9 @@ int* LeftThreats(int* field, int posX, int posY) {
 }
 
 int main(void) {
-    SetConsoleCP(1251); 
-    SetConsoleOutputCP(1251);
     FILE* inflow = fopen("field.txt", "r");
     if (!inflow) {
-        FatalError("Файл с шахматной доской не найден");
+        FatalError("File with checkmate field is missing!");
     }
     int* field = Malloc(FieldSize*FieldSize*sizeof(int));
     int i, j;

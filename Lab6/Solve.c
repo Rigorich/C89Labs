@@ -41,6 +41,7 @@ int main(void) {
     }
 #else
     FILE* inflow = stdin;
+    printf("Введите текст:\n");
 #endif
 
     Vector* str = StringNew();
@@ -67,8 +68,8 @@ int main(void) {
             ConsonantsCount += (TO(int)MapValue(Analysis, &sym));
         }
     }
-    printf(" Согласных букв - %d \n Гласных букв - %d \n Гласных > Согласных ? %d \n",
-            ConsonantsCount, VowelsCount, VowelsCount > ConsonantsCount);
+    printf(" Согласных букв - %d \n Гласных букв - %d \n Гласных > Согласных ?  %s. \n",
+            ConsonantsCount, VowelsCount, ((VowelsCount > ConsonantsCount) ? "Да" : "Нет"));
     
     return 0;
 }

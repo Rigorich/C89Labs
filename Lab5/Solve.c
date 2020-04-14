@@ -1,5 +1,5 @@
 
-#include "C:\BSUIR\C\deRigorich\deRigorich.h"
+#include "deRigorich.h"
 
 typedef struct Vertex Vertex;
 struct Vertex {

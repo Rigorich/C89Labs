@@ -18,5 +18,5 @@ jobs:
         shell: cmd
       - name: test
         run: make
-        working-directory: ./Lab1
+        working-directory: ./Lab5
         shell: cmd

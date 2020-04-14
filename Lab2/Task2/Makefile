@@ -1,6 +1,6 @@
-all: build run
+all: build run clean
 NAME_PART = Add
-PATH_LIB = Rigorich/C89Labs
+PATH_LIB = C:/BSUIR/C/C89Labs
 
 build:
 	cd $(CURDIR)
@@ -11,3 +11,6 @@ build:
 
 run:
 	./$(NAME_PART)
+
+clean:
+	git clean -x -f

@@ -13,4 +13,6 @@ run:
 	./$(NAME_PART)
 
 clean:
-	git clean -x -f
+	del *.exe
+	del *.o
+	del *.a

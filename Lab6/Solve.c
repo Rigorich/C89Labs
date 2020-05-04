@@ -52,20 +52,20 @@ int main(void) {
     printf("%s", StringBegin(str));
 #endif
     
-    Map* Analysis = MapNew(sizeof(char), sizeof(int), CmpChar, NullInt);
+    Tree* Analysis = TreeNew(sizeof(char), sizeof(int), CmpChar, NullInt);
     int i;
     for(i = 0; i < StringSize(str); i++){
         char sym = StringGetElem(str, i);
-        (TO(int)MapValue(Analysis, &sym)) += 1;
+        (TO(int)TreeGetElem(Analysis, &sym)) += 1;
     }
     
     int VowelsCount = 0, ConsonantsCount = 0;
     for(i = 0; i < StringSize(Alphabet); i++){
         char sym = StringGetElem(Alphabet, i);
         if(IsLetterVowel(sym)) {
-            VowelsCount += (TO(int)MapValue(Analysis, &sym));
+            VowelsCount += (TO(int)TreeGetElem(Analysis, &sym));
         } else {
-            ConsonantsCount += (TO(int)MapValue(Analysis, &sym));
+            ConsonantsCount += (TO(int)TreeGetElem(Analysis, &sym));
         }
     }
     printf(" Согласных букв - %d \n Гласных букв - %d \n Гласных > Согласных ?  %s. \n",

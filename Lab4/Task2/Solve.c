@@ -64,24 +64,23 @@ int main(void) {
     
     int AnsLen = 0, AnsInd = -1;
     int WordBeginInd = 0;
-    Map* Frequency = MapNew(sizeof(char*), sizeof(int), CmpCharArray, NullInt);
-    
+    Tree* Frequency = TreeNew(sizeof(char*), sizeof(int), CmpCharArray, NullInt);
     for (i = 0; i < StringSize(str); i++) {
         if (!StringContainElem(Alphabet, StringGetElem(str, i))) {
             StringSetElem(str, i, '\0');
             if (WordBeginInd < i) {
                 char* tmp = StringBegin(str) + WordBeginInd;
-                (TO(int)MapValue(Frequency, &tmp))++; 
+                (TO(int)TreeGetElem(Frequency, &tmp))++; 
             }
             WordBeginInd = i+1;
         }
     }
-    
     Vector* Dictionary = VectorNew(sizeof(Entry));
-    for(i = 0; i < Frequency->size; i++) {
+    TreeVertex* it;
+    for(it = TreeBegin(Frequency); it != TreeEnd(Frequency); it = TreeNext(Frequency, it)) {
         Entry tmp;
-        tmp.Word = TO(char*)VectorGetElem(Frequency->keys, i);
-        tmp.Count = TO(int)VectorGetElem(Frequency->values, i);
+        tmp.Word = TO(char*)(it->key);
+        tmp.Count = TO(int)(it->value);
         VectorAddElem(Dictionary, &tmp);
     }
     VectorSortComp(Dictionary, DictComp);
